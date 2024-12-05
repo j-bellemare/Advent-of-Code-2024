@@ -1,4 +1,4 @@
-input_file = open("word_search.txt", "r")
+input_file = open("./inputs/word_search.txt", "r")
 
 data = []
 for line in input_file:

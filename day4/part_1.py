@@ -1,6 +1,6 @@
 import re
 
-input_file = open("word_search.txt", "r")
+input_file = open("./inputs/word_search.txt", "r")
 pattern = r"XMAS"
 pattern2 = r"SAMX"
 total = 0

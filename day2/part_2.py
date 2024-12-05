@@ -1,4 +1,4 @@
-inpute_file = open("unusual_data.txt", "r")
+inpute_file = open("./inputs/unusual_data.txt", "r")
 
 report_status = 0
 

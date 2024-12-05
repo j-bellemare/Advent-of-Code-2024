@@ -2,7 +2,7 @@ import csv
 
 loc_list_1 = []
 loc_list_2 = []
-file = open("locations.csv", "r", encoding="utf-8-sig")
+file = open("./inputs/locations.csv", "r", encoding="utf-8-sig")
 csv_reader = csv.DictReader(file)
 
 for col in csv_reader:

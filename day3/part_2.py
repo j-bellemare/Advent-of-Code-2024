@@ -1,6 +1,6 @@
 import re
 
-input_file = open("corrupted_memory.txt", "r")
+input_file = open("./inputs/corrupted_memory.txt", "r")
 pattern = r"do\(\)|don\'t\(\)|mul\(\d{1,3},\d{1,3}\)"
 mul_pattern = r"mul\((\d{1,3}),\s*(\d{1,3})\)"
 
