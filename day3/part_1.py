@@ -8,6 +8,6 @@ matches = re.findall(pattern, data)
 
 total = 0
 for pair in matches:
-    total += (int(pair[0])*int(pair[1]))
+    total += int(pair[0]) * int(pair[1])
 
 print(total)

@@ -18,6 +18,6 @@ for match in matches:
     elif on is True:
         mult = re.findall(mul_pattern, match)
 
-        total += (int(mult[0][0])*int(mult[0][1]))
+        total += int(mult[0][0]) * int(mult[0][1])
 
 print(total)

@@ -14,7 +14,7 @@ for line in data1:
     i = 0
     for char in line:
         if i not in range(len(data2)):
-            data2.append('')
+            data2.append("")
         data2[i] = str(data2[i]) + char
         i += 1
 
@@ -33,7 +33,7 @@ def collect_diagonal(r, c, data):
         diagonal.append(data[r][c])
         r += 1  # Move down
         c += 1  # Move right
-    return ''.join(diagonal)
+    return "".join(diagonal)
 
 
 for col in range(cols):
