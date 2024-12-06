@@ -50,28 +50,16 @@ for line in full_prints:
 
 fixed_lines = []
 for line in bad_lines:
-    for num in line:
-        for rule in full_rules:
-            if num == rule[0]:
-                if rule[1] in line and line.index(rule[0]) > line.index(rule[1]):
-                    moved = rule[1]
-                    line.pop(line.index(rule[1]))
-                    line.append(moved)
-    for num in line:
-        for rule in full_rules:
-            if num == rule[0]:
-                if rule[1] in line and line.index(rule[0]) > line.index(rule[1]):
-                    moved = rule[1]
-                    line.pop(line.index(rule[1]))
-                    line.append(moved)
-    for num in line:
-        for rule in full_rules:
-            if num == rule[0]:
-                if rule[1] in line and line.index(rule[0]) > line.index(rule[1]):
-                    moved = rule[1]
-                    line.pop(line.index(rule[1]))
-                    line.append(moved)
-
+    i = 0
+    for i in range(100):
+        for num in line:
+            for rule in full_rules:
+                if num == rule[0]:
+                    if rule[1] in line and line.index(rule[0]) > line.index(rule[1]):
+                        moved = rule[1]
+                        line.pop(line.index(rule[1]))
+                        line.append(moved)
+        i += 1
     fixed_lines.append(line)
 
 total = 0
