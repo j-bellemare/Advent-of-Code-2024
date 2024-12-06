@@ -47,11 +47,37 @@ for line in full_prints:
     if line not in good_lines:
         bad_lines.append(line)
 
-print(bad_lines)
+
+fixed_lines = []
+for line in bad_lines:
+    for num in line:
+        for rule in full_rules:
+            if num == rule[0]:
+                if rule[1] in line and line.index(rule[0]) > line.index(rule[1]):
+                    moved = rule[1]
+                    line.pop(line.index(rule[1]))
+                    line.append(moved)
+    for num in line:
+        for rule in full_rules:
+            if num == rule[0]:
+                if rule[1] in line and line.index(rule[0]) > line.index(rule[1]):
+                    moved = rule[1]
+                    line.pop(line.index(rule[1]))
+                    line.append(moved)
+    for num in line:
+        for rule in full_rules:
+            if num == rule[0]:
+                if rule[1] in line and line.index(rule[0]) > line.index(rule[1]):
+                    moved = rule[1]
+                    line.pop(line.index(rule[1]))
+                    line.append(moved)
+
+    fixed_lines.append(line)
 
 total = 0
-for line in good_lines:
+for line in fixed_lines:
     middle = (len(line)-1)/2
     total += line[int(middle)]
+
 
 print(total)
