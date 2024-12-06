@@ -17,23 +17,23 @@ while patrol is True:
         for char in line:
             if (
                 (char == "^" and row == 0)
-                or (char == "v" and row == len(floor_map)-1)
+                or (char == "v" and row == len(floor_map) - 1)
                 or (char == "<" and col == 0)
-                or (char == ">" and col == len(line)-1)
+                or (char == ">" and col == len(line) - 1)
             ):
                 patrol = False
 
             if char == "^" and row > 0:
                 if floor_map[row - 1][col] != "#":
                     floor_map[row - 1][col] = "^"
-                elif col + 1 > len(line)-1:
+                elif col + 1 > len(line) - 1:
                     patrol = False
                 elif floor_map[row][col + 1] != "#":
                     floor_map[row][col + 1] = ">"
                 else:
                     floor_map[row - 1][col] = "v"
 
-            elif char == "v" and row < len(floor_map)-1:
+            elif char == "v" and row < len(floor_map) - 1:
                 if floor_map[row + 1][col] != "#":
                     floor_map[row + 1][col] = "v"
                 elif col - 1 < 0:
@@ -53,10 +53,10 @@ while patrol is True:
                 else:
                     floor_map[row][col + 1] = ">"
 
-            elif char == ">" and col < len(line)-1:
+            elif char == ">" and col < len(line) - 1:
                 if floor_map[row][col + 1] != "#":
                     floor_map[row][col + 1] = ">"
-                elif row + 1 > len(floor_map)-1:
+                elif row + 1 > len(floor_map) - 1:
                     patrol = False
                 elif floor_map[row + 1][col] != "#":
                     floor_map[row + 1][col] = "v"
